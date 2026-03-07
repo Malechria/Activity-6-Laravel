@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Universe extends Model
 {
     protected $fillable = ['id', 'universe', 'company', 'age'];
-}
 
+    public function characters()
+    {
+        return $this->hasMany(Character::class);
+    }
+}
