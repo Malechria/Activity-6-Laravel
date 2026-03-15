@@ -8,7 +8,7 @@ class Character extends Model
 {
     protected $fillable = ['id', 'name', 'real_name', 'gender', 'universe_id'];
 
-    // Esta es la relación de regreso:
+    
     public function universe()
     {
         return $this->belongsTo(Universe::class);

@@ -7,6 +7,10 @@
 <body>
     
     <h1>Superheroes List</h1>
+
+    <h1>Superhero list</h1>
+    <a href="/superheroes/create">Create New Superhero</a>
+    <br><br>
     
     <table border="1">
         <thead>
