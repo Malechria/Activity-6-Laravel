@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Create Superhero</title>
 </head>
 <body>
-    
-    <h1>Register new superhero</h1>
-    
+    <h1>Register New Superhero</h1>
     <form action="/superheroes" method="POST">
         @csrf
-        
-        <label>Hero name:</label><br>
+        <label>Hero Name:</label><br>
         <input type="text" name="name" required><br><br>
 
         <label>Real Identity:</label><br>
@@ -22,6 +19,7 @@
 
         <label>Universe:</label><br>
         <select name="universe_id" required>
+            <option value="">-- Select a Universe --</option>
             @foreach($universes as $universe)
                 <option value="{{ $universe->id }}">{{ $universe->universe }} ({{ $universe->company }})</option>
             @endforeach
@@ -29,9 +27,6 @@
 
         <button type="submit">Save Superhero</button>
     </form>
-
-    <br>
-    <a href="/superheroes">Go back to list</a>
-
+    <br><a href="/superheroes">Go back to list</a>
 </body>
 </html>

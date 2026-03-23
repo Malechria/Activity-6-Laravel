@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Superhéroes</title>
+    <title>Superheroes List</title>
 </head>
 <body>
     
     <h1>Superheroes List</h1>
 
-    <h1>Superhero list</h1>
     <a href="/superheroes/create">Create New Superhero</a>
     <br><br>
     
@@ -16,10 +15,10 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Hero name</th>
+                <th>Hero Name</th>
                 <th>Real Identity</th>
                 <th>Gender</th>
-            </tr>
+                <th>Actions</th> </tr>
         </thead>
         <tbody>
             @foreach($superheroes as $hero)
@@ -28,6 +27,17 @@
                 <td>{{ $hero->name }}</td>
                 <td>{{ $hero->real_name }}</td>
                 <td>{{ $hero->gender }}</td>
+                <td>
+                    <a href="/superheroes/{{ $hero->id }}">View</a> | 
+                    
+                    <a href="/superheroes/{{ $hero->id }}/edit">Edit</a> | 
+                    
+                    <form action="/superheroes/{{ $hero->id }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this superhero?')">Delete</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>

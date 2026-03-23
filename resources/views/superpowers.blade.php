@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Superpoderes</title>
+    <title>Superpowers</title>
 </head>
 <body>
     
