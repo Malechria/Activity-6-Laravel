@@ -25,3 +25,17 @@ Visit the following routes to verify the Create, Read, and Update operations, as
 - /actividad7/universe 
 
 - `/actividad7/superhero` 
+
+## Activity 8 CRUD Operations
+Both **Universes** and **Superheroes** now have a complete CRUD implementation using the 7 standard RESTful methods:
+1. **index**: Display the full list.
+2. **create**: Form to register new records.
+3. **store**: Securely save data to the database.
+4. **show**: Display individual record details.
+5. **edit**: Form to modify existing records.
+6. **update**: Save changes to the database.
+7. **destroy**: Remove records from the database.
+
+### How to test:
+* **Universes:** Visit `/universes`. From there, you can use the action buttons to Create, View, Edit, or Delete any record.
+* **Superheroes:** Visit `/superheroes`. This view includes the fixed logic to retrieve all universes in the creation form, as requested. You can perform all 7 operations directly from the UI.
